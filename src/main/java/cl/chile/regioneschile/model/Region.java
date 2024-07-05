@@ -18,7 +18,7 @@ public class Region {
     private String region_iso_3166_2;
     private String capital_regional;
 
-    @OneToMany(mappedBy = "region", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "region", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Provincia> provincias;
 
 

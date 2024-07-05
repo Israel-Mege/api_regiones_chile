@@ -22,7 +22,7 @@ public class Provincia {
     @JoinColumn(name = "region_id")
     private Region region;
 
-    @OneToMany(mappedBy = "provincia", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "provincia", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Comuna> comunas;
 
 
